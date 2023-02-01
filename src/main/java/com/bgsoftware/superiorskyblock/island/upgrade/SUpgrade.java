@@ -71,7 +71,7 @@ public class SUpgrade implements Upgrade {
         if (level > upgradeLevels.length)
             upgradeLevels = Arrays.copyOf(upgradeLevels, level);
 
-        upgradeLevels[level - 1] = upgradeLevel;
+        if (level > 0) upgradeLevels[level - 1] = upgradeLevel;
     }
 
     @Override
